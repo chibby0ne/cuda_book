@@ -1,0 +1,19 @@
+# vim
+*~
+*.swp
+
+# Executables
+chapter04/vector_sum_cuda
+chapter04/vector_sum
+chapter04/julia_set_gpu
+chapter03/show_device_properties
+chapter03/cuda_choose_device
+chapter03/hello_world_device
+chapter03/hello_world_host
+chapter03/add_cuda
+chapter06/simple_ray_tracing_gpu
+chapter05/shared_memory_julia_set
+chapter05/vector_sum_gpu_using_threads
+chapter05/vector_sum_gpu
+chapter05/gpu_ripple_threads
+chapter05/dot_product_gpu
