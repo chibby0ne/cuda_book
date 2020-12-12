@@ -393,13 +393,13 @@ Frees the memory of the event, just like cudaFree() does to a variable.
 
 Texture Memory
 You can use texture memory in CUDA.
-It is cached on chip, so in some situation sit will provide higher effective
-bandwith by reducing accesses to off-chip DRAM.
+It is cached on chip, so in some situations it will provide higher effective
+bandwidth by reducing accesses to off-chip DRAM.
 
-*Textue caches are designed for graphics applications where memory addreses
+*Texture caches are designed for graphics applications where memory addreses
 patterns exhibit strong spatial locality*, i.e: in a general computing
-application it means that thread is like to read from an address "near" the
-addres that nearby threads read threads read.
+application it means that thread is likely to read from an address "near" the
+address that nearby threads read.
 
 Example:
 
@@ -413,14 +413,12 @@ Thread 1 -> x
 Thread 2 -> x
 Thread 3 -> x
 
-Arithmetically the four addresses are not consecuitive so the would not be
+Arithmetically the four addresses are not consecutive so they would not be
 cached together in a typical CPU caching scheme. But since GPU texture caches
-are designed to accelerate access patters like this one.
-
-So this using texture memory instead of global memory for this cases, would
-increase performance.
-
+are designed to accelerate access patters like this one, we will see an
+increase in performance in this case when using texture memory instead of
+global memory.
 
 Example: 
 
-Two dimensional head transfer simulation.
+Two dimensional heat transfer simulation.
